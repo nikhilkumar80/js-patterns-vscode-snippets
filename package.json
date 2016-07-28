@@ -1,0 +1,35 @@
+{
+    "name": "js-patterns-snippets",
+    "displayName": "js-patterns-snippets",
+    "description": "JavaScript Pattern Snippets",
+    "version": "0.0.1",
+    "publisher": "nikhilkumar80",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "bugs": {
+        "url": "https://github.com/nikhilkumar80/js-patterns-vscode-snippets/issues",
+        "email": "nikhilkumar80@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nikhulkumar80/js-patterns-vscode-snippets.git"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "js",
+        "javascript",
+        "snippet",
+        "snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

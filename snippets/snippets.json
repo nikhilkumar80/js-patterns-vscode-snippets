@@ -1,0 +1,86 @@
+{
+	"jsp-amdmod": {
+		"prefix": "jsp-amdmod",
+		"body": "\ndefine([\n    \"${1:requiredModules}\"\n], function(${2:modules}) {\n    \"use strict\";\n\n    // static public property\n    ${3:myModule}.prop;\n\n    var ${3:myModule} = function() {\n\n        // public var\n        this.b = null;\n\n        // pseudo-protected var\n        this._c = null;\n\n    };\n\n    function ${4:privateMethod}(args) {\n    };\n\n    ${3:myModule}.${5:staticMethod} = function(args) {\n    };\n\n    ${3:myModule}.prototype.${6:publicMethod} = function(args) {\n    };\n\n    return ${3:myModule};\n});",
+		"description": "JS AMD module pattern",
+		"scope": "source.js"
+	},
+	"jsp-constructor": {
+		"prefix": "jsp-constructor",
+		"body": "\nvar ${1:ConstructorName} = (function() {\n\t'use strict';\n\n\tfunction ${1:ConstructorName}(${2:args}) {\n\t\t// enforces new\n\t\tif (!(this instanceof ${1:ConstructorName})) {\n\t\t\treturn new ${1:ConstructorName}(${2:args});\n\t\t}\n\t\t${3:// constructor body}\n\t}\n\n\t${4:${1:ConstructorName}.prototype.${5:methodName} = function(${6:args}) {\n\t\t${7:// method body}\n\t\\}};\n\n\treturn ${1:ConstructorName};\n}());",
+		"description": "JS constructor pattern",
+		"scope": "source.js"
+	},
+	"jsp-debounce": {
+		"prefix": "jsp-debounce",
+		"body": "\nvar ${1:functionName} = (function() {\n\t'use strict';\n\n\tvar timeWindow = ${2:500}; // time in ms\n\tvar timeout;\n\n\tvar ${1:functionName} = function(${3:args}) {\n\t\t${4: // your code goes here}\n\t};\n\n\treturn function() {\n\t\tvar context = this;\n\t\tvar args = arguments;\n\t\tclearTimeout(timeout);\n\t\ttimeout = setTimeout(function() {\n\t\t\t${1:functionName}.apply(context, args);\n\t\t}, timeWindow);\n\t};\n}());",
+		"description": "Debounced function",
+		"scope": "source.js"
+	},
+	"jsp-forin": {
+		"prefix": "jsp-forin",
+		"body": "\nfor (${1:prop} in ${2:obj}) {\n\tif ({}.hasOwnProperty.call(${2:obj}, ${1:prop})) {\n\t\t${3:${2:obj}[${1:prop}]$0;}\n\t}\n}",
+		"description": "for in own properties",
+		"scope": "source.js"
+	},
+	"jsp-ifun": {
+		"prefix": "jsp-ifun",
+		"body": "\n;(function() {\n\t'use strict';\n\n\t$1\n}());",
+		"description": "immediate function",
+		"scope": "source.js"
+	},
+	"jsp-ifor": {
+		"prefix": "jsp-ifor",
+		"body": "\nfor (var i = 0, len = ${1:arr}.length; i < len; i++) {\n\t${2:$1[i]}$3\n}",
+		"description": "improved for loop",
+		"scope": "source.js"
+	},
+	"jsp-memoize": {
+		"prefix": "jsp-memoize",
+		"body": "\nvar ${1:functionName} = (function() {\n\t'use strict';\n\n\tvar funcMemoized = function() {\n\t\tvar cacheKey = JSON.stringify(Array.prototype.slice.call(arguments));\n\t\tvar result;\n\n\t\tif (!funcMemoized.cache.hasOwnProperty(cacheKey)) {\n\t\t\t\t${2:// your expensive computation goes here\n\t\t\t\t// to reference the paramaters passed, use arguments[n]\n\t\t\t\t// eg.: result = arguments[0] + arguments[1];}\n\t\t\t\tfuncMemoized.cache[cacheKey] = result;\n\t\t}\n\n\t\treturn funcMemoized.cache[cacheKey];\n\t};\n\n\tfuncMemoized.cache = {};\n\n\treturn funcMemoized;\n}());",
+		"description": "Function with memoization",
+		"scope": "source.js"
+	},
+	"jsp-module": {
+		"prefix": "jsp-module",
+		"body": "\nvar ${1:moduleName} = (function() {\n\t'use strict';\n\n\tvar ${1:moduleName} = {\n\t\tinit: {\n\t\t\t$2\n\t\t}\n\t};\n\n\treturn ${1:moduleName};\n}());",
+		"description": "JS module pattern",
+		"scope": "source.js"
+	},
+	"jsp-namespace": {
+		"prefix": "jsp-namespace",
+		"body": "\n;(function(${1:namespace}) {\n  'use strict';\n\n\t$2\n})(window.$1 = window.$1 || {});",
+		"description": "namespace pattern",
+		"scope": "source.js"
+	},
+	"jsp-okl": {
+		"prefix": "jsp-okl",
+		"body": "\nObjects.keys(${1:obj}).forEach(function(key) {\n\t${2:$1}\n})",
+		"description": "Object.keys loop",
+		"scope": "source.js"
+	},
+	"jsp-once": {
+		"prefix": "jsp-once",
+		"body": "\nvar ${1:functionName} = (function() {\n  var didRun = false;\n\n  // This function will be executed only once, no matter how many times\n  // it is called.\n  function ${1:functionName}() {\n    ${2:// Your code goes here}\n  }\n\n  return function() {\n    if (didRun) {\n      return;\n    }\n\n    didRun = true;\n\n    return ${1:functionName}.apply(this, arguments);\n  }\n})();",
+		"description": "Execute a function only once.",
+		"scope": "source.js"
+	},
+	"jsp-rmodule": {
+		"prefix": "jsp-rmodule",
+		"body": "\nvar ${1:revealingModuleName} = (function() {\n\t'use strict';\n\n\tfunction ${2:methodName}() {\n\t\t${3}\n\t}\n\n\treturn {\n\t\t${2:methodName}:${2:methodName}\n\t};\n}());",
+		"description": "JS revealing module pattern",
+		"scope": "source.js"
+	},
+	"jsp-singleton": {
+		"prefix": "jsp-singleton",
+		"body": "\nvar ${1:name} = (function() {\n\t'use strict';\n\n\tvar instance;\n\n\t${1:name} = function(${2:args}) {\n\t\tif (instance) {\n\t\t\treturn instance;\n\t\t}\n\n\t\tinstance = this;\n\n\t\t${3:// your code goes here}\n\t};\n\n\treturn ${1:name};\n}());",
+		"description": "JS singleton pattern",
+		"scope": "source.js"
+	},
+	"jsp-throttle": {
+		"prefix": "jsp-throttle",
+		"body": "\nvar ${1:functionName} = (function() {\n\t'use strict';\n\n\tvar timeWindow = ${2:500}; // time in ms\n\tvar lastExecution = new Date((new Date()).getTime() - timeWindow);\n\n\tvar ${1:functionName} = function(${3:args}) {\n\t\t${4: // your code goes here}\n\t};\n\n\treturn function() {\n\t\tif ((lastExecution.getTime() + timeWindow) <= (new Date()).getTime()) {\n\t\t\tlastExecution = new Date();\n\t\t\treturn ${1:functionName}.apply(this, arguments);\n\t\t}\n\t};\n}());",
+		"description": "Throttled function",
+		"scope": "source.js"
+	}
+}
