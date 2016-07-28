@@ -1,4 +1,4 @@
-**This package is just a shameless port from the awesome [js-patterns-sublime-snippets](https://github.com/caiogondim/js-patterns-sublime-snippets)**
+**[This package](https://github.com/nikhilkumar80/js-patterns-vscode-snippets) is just a shameless port from the awesome [js-patterns-sublime-snippets](https://github.com/caiogondim/js-patterns-sublime-snippets)**
 
 # JavaScript Patterns Snippets 
 
@@ -11,7 +11,7 @@ Snippets for [Visual Studio Code](https://code.visualstudio.com) with **good sol
 > – Wikipedia
 
 # Usage
-Type 'jsp-' in a JavaScript file and select the snippet from the auto suggestion dropdown.
+Type 'jsp' in a JavaScript file and select the snippet from the auto suggestion dropdown.
 
 # Installation
 1. Install Visual Studio Code 0.10.1 or higher
