@@ -55,7 +55,7 @@
 	},
 	"jspOkl": {
 		"prefix": "jspOkl",
-		"body": "\nObjects.keys(${1:obj}).forEach(function(key) {\n\t${2:$1}\n})",
+		"body": "\nObject.keys(${1:obj}).forEach(function(key) {\n\t${2:$1}\n})",
 		"description": "Object.keys loop",
 		"scope": "source.js"
 	},
