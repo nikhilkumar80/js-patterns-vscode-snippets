@@ -24,5 +24,8 @@ Type 'jsp' in a JavaScript file and select the snippet from the auto suggestion 
 
 ## Release Notes
 
+### 0.0.2
+Fixed tiny `jspOkl` typo.
+
 ### 0.0.1
 Initial release.
